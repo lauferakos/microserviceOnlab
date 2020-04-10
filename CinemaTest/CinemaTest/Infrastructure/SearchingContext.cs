@@ -1,5 +1,6 @@
 ﻿using CinemaTest.AggregatesModel.OrderAggregate;
 using CinemaTest.AggregatesModel.ProjectionAggregate;
+using CinemaTest.AggregatesModel.RoomAggregate;
 using CinemaTest.AggregatesModel.ViewerAggregate;
 using CinemaTest.SeedWork;
 using Microsoft.EntityFrameworkCore;

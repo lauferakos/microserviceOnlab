@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "087rhnkmKF/OJdMe07ITY7D/pyrpvit0APKsBhh22kejHaV/R0xvmAcvtEEeHbdN5ZzezOkrzc5SBFCeLjZ/hA==",
+  "dgSpecHash": "t2jr7B4SqL1Xh78S6bYKccW2Euxr3ggOhPtx8eDis+/0E2Hjs31rAfgt5d8ie/tJi1wYhE7yKRZTee5dppPDfw==",
   "success": true,
   "projectFilePath": "C:\\Users\\laufe\\OneDrive\\Asztali gép\\CinemaTest\\CinemaTest\\CinemaTest.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,7 @@
     "C:\\Users\\laufe\\.nuget\\packages\\microsoft.extensions.options\\3.1.2\\microsoft.extensions.options.3.1.2.nupkg.sha512",
     "C:\\Users\\laufe\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.2\\microsoft.extensions.primitives.3.1.2.nupkg.sha512",
     "C:\\Users\\laufe\\.nuget\\packages\\microsoft.identity.client\\3.0.8\\microsoft.identity.client.3.0.8.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\laufe\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\laufe\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.9.10\\microsoft.visualstudio.azure.containers.tools.targets.1.9.10.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",

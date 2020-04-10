@@ -5,9 +5,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CinemaTest.AggregatesModel.ProjectionAggregate
+namespace CinemaTest.AggregatesModel.RoomAggregate
 {
-    public class Room : Entity
+    public class Room : Entity,IAggregateRoot
     {
 		
 		private int roomNumber;

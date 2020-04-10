@@ -1,4 +1,5 @@
-﻿using CinemaTest.SeedWork;
+﻿using CinemaTest.AggregatesModel.RoomAggregate;
+using CinemaTest.SeedWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,12 @@ namespace CinemaTest.AggregatesModel.OrderAggregate
 {
     public interface IOrderRepository: IRepository<Order>
     {
-        Order Add(Order order);
-        Order Update(Order order);
-        Task<Order> FindByIdAsync(int id);
-        void Remove(Order order);
+        Order AddOrder(Order order);
+        Order UpdateOrder(Order order);
+        Task<Order> FindOrderByIdAsync(int id);
+        void RemoveOrder(Order order);
+
+        Task<List<Order>> GetAllOrderByViewerIdAsync(int viewerId);      
 
         
     }

@@ -2,10 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CinemaTest.AggregatesModel.OrderAggregate
+namespace CinemaTest.AggregatesModel.RoomAggregate
 {
     public class Seat : Entity
     {
@@ -37,5 +38,17 @@ namespace CinemaTest.AggregatesModel.OrderAggregate
             set { price = value; }
         }
 
+        //RoomFK
+
+        private int roomId;
+
+        public Room Room { get; set; }
+
+        [ForeignKey("Room")]
+        public int RoomFK
+        {
+            get { return roomId; }
+            set { roomId = value; }
+        }
     }
 }

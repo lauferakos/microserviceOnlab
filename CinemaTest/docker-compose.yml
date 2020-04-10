@@ -6,13 +6,13 @@ services:
     build:
       context: .
       dockerfile: CinemaTest/Dockerfile
-    environment:
-       DBServer: "localhost"
     ports:
-        - "8080:80"
+       - "8080:80"
+    networks:
+       - searching-network
     
 
-
+    
   ms-sql-server:
     image: mcr.microsoft.com/mssql/server:2017-latest
     environment: 
@@ -21,3 +21,10 @@ services:
         MSSQL_PID: Express
     ports:
      - "1433:1433"
+    networks:
+     - searching-network
+
+
+networks:
+  searching-network:
+    driver: bridge

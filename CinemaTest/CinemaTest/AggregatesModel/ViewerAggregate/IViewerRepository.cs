@@ -8,9 +8,9 @@ namespace CinemaTest.AggregatesModel.ViewerAggregate
 {
     public interface IViewerRepository : IRepository<Viewer>
     {
-        Viewer Add(Viewer viewer);
-        Viewer Update(Viewer viewer);
-        Task<Viewer> FindByIdAsync(int id);
-        void Remove(Viewer viewer);
+        Viewer AddViewer(Viewer viewer);
+        Viewer UpdateViewer(Viewer viewer);
+        Task<Viewer> FindViewerByIdAsync(int id);
+        void RemoveViewer(Viewer viewer);
     }
 }

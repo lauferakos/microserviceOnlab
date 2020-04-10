@@ -20,23 +20,23 @@ namespace CinemaTest.Infrastructure.Repositories
         {
             this.context = context ?? throw new ArgumentNullException(nameof(context));
         }
-        public Viewer Add(Viewer viewer)
+        public Viewer AddViewer(Viewer viewer)
         {
             return context.Viewers.Add(viewer).Entity;
         }
 
-        public async Task<Viewer> FindByIdAsync(int id)
+        public async Task<Viewer> FindViewerByIdAsync(int id)
         {
             var viewer = await context.Viewers.Where(v => v.Id == id).SingleOrDefaultAsync();
             return viewer;
         }
 
-        public void Remove(Viewer viewer)
+        public void RemoveViewer(Viewer viewer)
         {
             context.Viewers.Remove(viewer);
         }
 
-        public Viewer Update(Viewer viewer)
+        public Viewer UpdateViewer(Viewer viewer)
         {
            return context.Viewers.Update(viewer).Entity;
         }

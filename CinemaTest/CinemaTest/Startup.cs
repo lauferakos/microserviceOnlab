@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CinemaTest.AggregatesModel.OrderAggregate;
 using CinemaTest.AggregatesModel.ProjectionAggregate;
+using CinemaTest.AggregatesModel.RoomAggregate;
 using CinemaTest.AggregatesModel.ViewerAggregate;
 using CinemaTest.Infrastructure;
 using CinemaTest.Infrastructure.Repositories;
@@ -31,7 +32,7 @@ namespace CinemaTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var server = Configuration["DBServer"] ?? "localhost";
+            var server = Configuration["DBServer"] ?? "ms-sql-server";
             var port = Configuration["DBPort"] ?? "1433";
             var user = Configuration["DBUser"] ?? "SA";
             var password = Configuration["DBPassword"] ?? "A4s5dkw52+B!";
@@ -43,6 +44,7 @@ namespace CinemaTest
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IProjectionRepository, ProjectionRepository>();
             services.AddTransient<IViewerRepository, ViewerRepository>();
+            services.AddTransient<IRoomRepository, RoomRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
