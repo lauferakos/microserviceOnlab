@@ -1,0 +1,34 @@
+networks:
+  searching-network:
+    driver: bridge
+services:
+  cinematest:
+    build:
+      context: C:\Users\laufe\OneDrive\Asztali gÚp\CinemaTest
+      dockerfile: CinemaTest/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: cinematest
+    networks:
+      searching-network: {}
+    ports:
+    - published: 8080
+      target: 80
+    - target: 80
+    - target: 443
+    volumes:
+    - /c/Users/laufe/AppData/Roaming/ASP.NET/Https:/root/.aspnet/https:ro
+    - /c/Users/laufe/AppData/Roaming/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+  ms-sql-server:
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Express
+      SA_PASSWORD: A4s5dkw52+B!
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    networks:
+      searching-network: {}
+    ports:
+    - published: 1433
+      target: 1433
+version: '3.4'

@@ -1,0 +1,49 @@
+<app-search></app-search>
+
+<div id="container">
+  <div *ngIf="isDetailsShow">
+    <app-film-details id="second" [Film]="selectedFilm"></app-film-details>
+  </div>
+
+  <div id="first">
+    <table mat-table [dataSource]="dataSource">
+
+
+      <ng-container matColumnDef="Title">
+        <th mat-header-cell *matHeaderCellDef> Cím </th>
+        <td mat-cell *matCellDef="let element"> {{element.Title}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="Duration">
+        <th mat-header-cell *matHeaderCellDef> Hossz </th>
+        <td mat-cell *matCellDef="let element"> {{element.Duration}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="Director">
+        <th mat-header-cell *matHeaderCellDef> Rendező </th>
+        <td mat-cell *matCellDef="let element"> {{element.Director}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Actions">
+        <mat-header-cell *matHeaderCellDef> Lehetőségek </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button (click)="showDetails(element)" mat-button color="accent">
+            <mat-icon>info</mat-icon>
+          </button>
+          <a routerLink="/projections" mat-button color="accent">
+            <mat-icon>add_shopping_cart</mat-icon>
+          </a>
+        </mat-cell>
+      </ng-container>
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+  </div>
+</div>

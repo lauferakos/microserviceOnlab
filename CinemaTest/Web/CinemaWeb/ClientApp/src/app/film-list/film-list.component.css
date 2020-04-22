@@ -1,0 +1,17 @@
+
+
+table {
+  width: 100%;
+}
+
+#first {
+  width: 800px;
+  float: left;
+  height: 500px;
+  overflow: auto;
+}
+
+#second {
+  width: 300px;
+  float: right;
+}

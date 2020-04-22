@@ -1,0 +1,43 @@
+
+
+<div id="container">
+
+  <div>
+    <table mat-table [dataSource]="dataSource">
+
+
+      <ng-container matColumnDef="Room">
+        <th mat-header-cell *matHeaderCellDef> Terem </th>
+        <td mat-cell *matCellDef="let element"> {{element.room}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="FreeSeats">
+        <th mat-header-cell *matHeaderCellDef> Szabad helyek </th>
+        <td mat-cell *matCellDef="let element"> {{element.freeseats}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="StartTime">
+        <th mat-header-cell *matHeaderCellDef> Időpont </th>
+        <td mat-cell *matCellDef="let element"> {{element.startTime}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Actions">
+        <mat-header-cell *matHeaderCellDef> Lehetőségek </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <button mat-button color="accent">
+            <mat-icon>add_shopping_cart</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+  </div>
+</div>
